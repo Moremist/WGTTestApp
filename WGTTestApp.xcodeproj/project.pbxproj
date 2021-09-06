@@ -3,27 +3,47 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		6F413ACE26E663BF00D076DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413ACD26E663BF00D076DD /* AppDelegate.swift */; };
 		6F413AD026E663BF00D076DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413ACF26E663BF00D076DD /* SceneDelegate.swift */; };
-		6F413AD226E663BF00D076DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AD126E663BF00D076DD /* ViewController.swift */; };
 		6F413AD526E663C000D076DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F413AD326E663C000D076DD /* Main.storyboard */; };
 		6F413AD726E663DB00D076DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F413AD626E663DB00D076DD /* Assets.xcassets */; };
 		6F413ADA26E663DB00D076DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F413AD826E663DB00D076DD /* LaunchScreen.storyboard */; };
+		6F413AE226E6649000D076DD /* ExcursionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AE126E6649000D076DD /* ExcursionModel.swift */; };
+		6F413AE426E6650600D076DD /* ExcursionStepModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AE326E6650600D076DD /* ExcursionStepModel.swift */; };
+		6F413AE726E675DF00D076DD /* ExcursionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AE626E675DF00D076DD /* ExcursionListViewController.swift */; };
+		6F413AEB26E6790C00D076DD /* APIUnsplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AEA26E6790C00D076DD /* APIUnsplash.swift */; };
+		6F413AED26E67B2600D076DD /* UnsplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AEC26E67B2600D076DD /* UnsplashModel.swift */; };
+		6F413AEF26E67EB200D076DD /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AEE26E67EB200D076DD /* MainViewController.swift */; };
+		6F413AF226E6845A00D076DD /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */; };
+		6F9E67DE26E69D1E008B035E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */; };
+		6F9E67E026E6A77C008B035E /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F9E67DF26E6A77B008B035E /* audio.mp3 */; };
+		9B7C25519FF3E06F052753F2 /* Pods_WGTTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGTTestApp.release.xcconfig"; path = "Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		6F413ACA26E663BF00D076DD /* WGTTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGTTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F413ACD26E663BF00D076DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F413ACF26E663BF00D076DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6F413AD126E663BF00D076DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6F413AD426E663C000D076DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F413AD626E663DB00D076DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F413AD926E663DB00D076DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6F413ADB26E663DB00D076DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F413AE126E6649000D076DD /* ExcursionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionModel.swift; sourceTree = "<group>"; };
+		6F413AE326E6650600D076DD /* ExcursionStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionStepModel.swift; sourceTree = "<group>"; };
+		6F413AE626E675DF00D076DD /* ExcursionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExcursionListViewController.swift; sourceTree = "<group>"; };
+		6F413AEA26E6790C00D076DD /* APIUnsplash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIUnsplash.swift; sourceTree = "<group>"; };
+		6F413AEC26E67B2600D076DD /* UnsplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnsplashModel.swift; sourceTree = "<group>"; };
+		6F413AEE26E67EB200D076DD /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
+		6F9E67DF26E6A77B008B035E /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
+		8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGTTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGTTestApp.debug.xcconfig"; path = "Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +51,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B7C25519FF3E06F052753F2 /* Pods_WGTTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E79A41C947D7B3F93979240 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6F413AC126E663BF00D076DD = {
 			isa = PBXGroup;
 			children = (
 				6F413ACC26E663BF00D076DD /* WGTTestApp */,
 				6F413ACB26E663BF00D076DD /* Products */,
+				C0E202E71DD9A84547CD9F83 /* Pods */,
+				5E79A41C947D7B3F93979240 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,13 +89,46 @@
 			children = (
 				6F413ACD26E663BF00D076DD /* AppDelegate.swift */,
 				6F413ACF26E663BF00D076DD /* SceneDelegate.swift */,
-				6F413AD126E663BF00D076DD /* ViewController.swift */,
+				6F413AE526E6662C00D076DD /* Models */,
+				6F413AF026E6801400D076DD /* Controllers */,
 				6F413AD326E663C000D076DD /* Main.storyboard */,
+				6F413AEA26E6790C00D076DD /* APIUnsplash.swift */,
 				6F413AD626E663DB00D076DD /* Assets.xcassets */,
+				6F9E67DF26E6A77B008B035E /* audio.mp3 */,
 				6F413AD826E663DB00D076DD /* LaunchScreen.storyboard */,
 				6F413ADB26E663DB00D076DD /* Info.plist */,
 			);
 			path = WGTTestApp;
+			sourceTree = "<group>";
+		};
+		6F413AE526E6662C00D076DD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				6F413AE126E6649000D076DD /* ExcursionModel.swift */,
+				6F413AE326E6650600D076DD /* ExcursionStepModel.swift */,
+				6F413AEC26E67B2600D076DD /* UnsplashModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		6F413AF026E6801400D076DD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				6F413AEE26E67EB200D076DD /* MainViewController.swift */,
+				6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */,
+				6F413AE626E675DF00D076DD /* ExcursionListViewController.swift */,
+				6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		C0E202E71DD9A84547CD9F83 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */,
+				642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +138,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F413ADE26E663DB00D076DD /* Build configuration list for PBXNativeTarget "WGTTestApp" */;
 			buildPhases = (
+				1F6945E55D1D3C971CB22CDA /* [CP] Check Pods Manifest.lock */,
 				6F413AC626E663BF00D076DD /* Sources */,
 				6F413AC726E663BF00D076DD /* Frameworks */,
 				6F413AC826E663BF00D076DD /* Resources */,
+				302C9B9D751613811AB0DD39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -125,6 +191,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F413ADA26E663DB00D076DD /* LaunchScreen.storyboard in Resources */,
+				6F9E67E026E6A77C008B035E /* audio.mp3 in Resources */,
 				6F413AD726E663DB00D076DD /* Assets.xcassets in Resources */,
 				6F413AD526E663C000D076DD /* Main.storyboard in Resources */,
 			);
@@ -132,14 +199,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F6945E55D1D3C971CB22CDA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WGTTestApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		302C9B9D751613811AB0DD39 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6F413AC626E663BF00D076DD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F413AD226E663BF00D076DD /* ViewController.swift in Sources */,
+				6F413AED26E67B2600D076DD /* UnsplashModel.swift in Sources */,
+				6F413AE426E6650600D076DD /* ExcursionStepModel.swift in Sources */,
 				6F413ACE26E663BF00D076DD /* AppDelegate.swift in Sources */,
+				6F413AEB26E6790C00D076DD /* APIUnsplash.swift in Sources */,
+				6F413AE726E675DF00D076DD /* ExcursionListViewController.swift in Sources */,
+				6F413AF226E6845A00D076DD /* PhotoTableViewCell.swift in Sources */,
+				6F413AE226E6649000D076DD /* ExcursionModel.swift in Sources */,
 				6F413AD026E663BF00D076DD /* SceneDelegate.swift in Sources */,
+				6F413AEF26E67EB200D076DD /* MainViewController.swift in Sources */,
+				6F9E67DE26E69D1E008B035E /* PlayerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -283,12 +399,14 @@
 		};
 		6F413ADF26E663DB00D076DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3J9DR9455;
 				INFOPLIST_FILE = WGTTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -302,12 +420,14 @@
 		};
 		6F413AE026E663DB00D076DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3J9DR9455;
 				INFOPLIST_FILE = WGTTestApp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
