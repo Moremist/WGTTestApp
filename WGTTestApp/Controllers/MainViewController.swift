@@ -31,6 +31,7 @@ class MainViewController: UIViewController {
         photoCollectionView.contentInsetAdjustmentBehavior = .never
         
         setUpPlayer()
+        setUpSlider()
         setUpStackView()
     }
     
@@ -48,15 +49,6 @@ class MainViewController: UIViewController {
         playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem)
         player?.play()
-        
-        let duration : CMTime = playerItem!.asset.duration
-        let seconds : Float64 = CMTimeGetSeconds(duration)
-        
-        playbackSlider.maximumValue = Float(seconds)
-        playbackSlider.isContinuous = true
-        playbackSlider.addTarget(self, action: #selector(playbackSliderValueChanged(_:)), for: .valueChanged)
-        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .normal)
-        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .highlighted)
         
         player?.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main, using: { cmTime in
             if self.player?.currentItem?.status == .readyToPlay {
@@ -80,6 +72,17 @@ class MainViewController: UIViewController {
         playPauseButton.setImage(#imageLiteral(resourceName: "013-play"), for: .normal)
     }
     
+    fileprivate func setUpSlider() {
+        let duration : CMTime = playerItem!.asset.duration
+        let seconds : Float64 = CMTimeGetSeconds(duration)
+        
+        playbackSlider.maximumValue = Float(seconds)
+        playbackSlider.isContinuous = true
+        playbackSlider.addTarget(self, action: #selector(playbackSliderValueChanged(_:)), for: .valueChanged)
+        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .normal)
+        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .highlighted)
+    }
+    
     fileprivate func setUpStackView() {
         let tap = UITapGestureRecognizer(target: self, action: #selector (showPlayerVC) )
         playerStackView.addGestureRecognizer(tap)
@@ -87,7 +90,7 @@ class MainViewController: UIViewController {
     }
     
     @objc func showPlayerVC() {
-        let vc = storyboard?.instantiateViewController(identifier: "playerVC") as! PlayerViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "playerVC") as! PlayerViewController
         vc.currentExcursion = self.currentExcursion
         vc.currentStepIndex = self.currentStepIndex
         vc.player = self.player

@@ -19,6 +19,7 @@ class PlayerViewController: UIViewController {
         
         setUpExcursionData()
         setUpPlayer()
+        setUpSlider()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -39,15 +40,6 @@ class PlayerViewController: UIViewController {
             self.playPauseButton.setImage(#imageLiteral(resourceName: "pause-2"), for: .normal)
         }
         
-        let duration : CMTime = (player?.currentItem!.asset.duration)!
-        let seconds : Float64 = CMTimeGetSeconds(duration)
-        
-        playBackSlider.maximumValue = Float(seconds)
-        playBackSlider.isContinuous = true
-        playBackSlider.addTarget(self, action: #selector(playbackSliderValueChanged(_:)), for: .valueChanged)
-        playBackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .normal)
-        playBackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .highlighted)
-        
         player?.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main, using: { cmTime in
             if self.player?.currentItem?.status == .readyToPlay {
                 let time = CMTimeGetSeconds((self.player?.currentTime())!)
@@ -66,6 +58,17 @@ class PlayerViewController: UIViewController {
         }
     }
     
+    fileprivate func setUpSlider() {
+        let duration : CMTime = (player?.currentItem!.asset.duration)!
+        let seconds : Float64 = CMTimeGetSeconds(duration)
+        
+        playBackSlider.maximumValue = Float(seconds)
+        playBackSlider.isContinuous = true
+        playBackSlider.addTarget(self, action: #selector(playbackSliderValueChanged(_:)), for: .valueChanged)
+        playBackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .normal)
+        playBackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .highlighted)
+    }
+    
     @IBAction func playPauseButtonPressed(_ sender: Any) {
         if player?.rate == 0 {
             player?.play()
@@ -77,7 +80,7 @@ class PlayerViewController: UIViewController {
     }
     
     @IBAction func stepsButtonressed(_ sender: Any) {
-        let vc = storyboard?.instantiateViewController(identifier: "stepsVC") as! StepsViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "stepsVC") as! StepsViewController
         vc.currentExcursion = self.currentExcursion
         vc.currentStepIndex = self.currentStepIndex
         present(vc, animated: true, completion: nil)

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 51;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -25,11 +25,9 @@
 		6F413AF226E6845A00D076DD /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */; };
 		6F9E67DE26E69D1E008B035E /* PlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */; };
 		6F9E67E026E6A77C008B035E /* audio.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6F9E67DF26E6A77B008B035E /* audio.mp3 */; };
-		9B7C25519FF3E06F052753F2 /* Pods_WGTTestApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGTTestApp.release.xcconfig"; path = "Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp.release.xcconfig"; sourceTree = "<group>"; };
 		6F23BEDB26E767210005BC4F /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
 		6F23BEDD26E7AF710005BC4F /* StepDirectEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDirectEnum.swift; sourceTree = "<group>"; };
 		6F23BEDF26E7BE0E0005BC4F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
@@ -50,8 +48,6 @@
 		6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
 		6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerViewController.swift; sourceTree = "<group>"; };
 		6F9E67DF26E6A77B008B035E /* audio.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = audio.mp3; sourceTree = "<group>"; };
-		8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WGTTestApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGTTestApp.debug.xcconfig"; path = "Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,28 +55,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B7C25519FF3E06F052753F2 /* Pods_WGTTestApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5E79A41C947D7B3F93979240 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				8327F6D39EDB20CF1D159045 /* Pods_WGTTestApp.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6F413AC126E663BF00D076DD = {
 			isa = PBXGroup;
 			children = (
 				6F413ACC26E663BF00D076DD /* WGTTestApp */,
 				6F413ACB26E663BF00D076DD /* Products */,
-				C0E202E71DD9A84547CD9F83 /* Pods */,
-				5E79A41C947D7B3F93979240 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,15 +127,6 @@
 			path = Helpers;
 			sourceTree = "<group>";
 		};
-		C0E202E71DD9A84547CD9F83 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */,
-				642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,11 +134,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6F413ADE26E663DB00D076DD /* Build configuration list for PBXNativeTarget "WGTTestApp" */;
 			buildPhases = (
-				1F6945E55D1D3C971CB22CDA /* [CP] Check Pods Manifest.lock */,
 				6F413AC626E663BF00D076DD /* Sources */,
 				6F413AC726E663BF00D076DD /* Frameworks */,
 				6F413AC826E663BF00D076DD /* Resources */,
-				302C9B9D751613811AB0DD39 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -218,48 +192,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		1F6945E55D1D3C971CB22CDA /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-WGTTestApp-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		302C9B9D751613811AB0DD39 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6F413AC626E663BF00D076DD /* Sources */ = {
@@ -356,7 +288,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -411,7 +343,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -423,14 +355,13 @@
 		};
 		6F413ADF26E663DB00D076DD /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F37FBEA9F3F12222D8B5BDBE /* Pods-WGTTestApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3J9DR9455;
 				INFOPLIST_FILE = WGTTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -444,14 +375,13 @@
 		};
 		6F413AE026E663DB00D076DD /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Y3J9DR9455;
 				INFOPLIST_FILE = WGTTestApp/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

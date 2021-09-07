@@ -57,7 +57,7 @@ extension ExcursionListViewController: UITableViewDelegate, UITableViewDataSourc
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         listTableView.deselectRow(at: indexPath, animated: true)
         
-        let vc = storyboard?.instantiateViewController(identifier: "mainVC") as! MainViewController
+        let vc = storyboard?.instantiateViewController(withIdentifier: "mainVC") as! MainViewController
         vc.currentExcursion = excursionList[indexPath.row]
         vc.currentStepIndex = excursionList.startIndex
         present(vc, animated: true, completion: nil)

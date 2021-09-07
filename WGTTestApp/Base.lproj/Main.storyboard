@@ -75,7 +75,7 @@
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Excursion Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BOw-29-m8t">
                                         <rect key="frame" x="131.5" y="0.0" width="111" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -258,9 +258,9 @@
                                             <action selector="closeButtonPressed:" destination="RK0-NS-D6e" eventType="touchUpInside" id="wAx-re-Qmo"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excursion Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-7k-xn8">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excursion Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ndA-7k-xn8">
                                         <rect key="frame" x="50" y="0.0" width="274" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -330,7 +330,7 @@
                                     <constraint firstAttribute="height" constant="50" id="4lV-YL-AK1"/>
                                     <constraint firstAttribute="width" constant="50" id="Kau-uX-lBd"/>
                                 </constraints>
-                                <state key="normal" title="Button" image="play"/>
+                                <state key="normal" title="Button" image="play-2"/>
                                 <connections>
                                     <action selector="playPauseButtonPressed:" destination="RK0-NS-D6e" eventType="touchUpInside" id="z8M-SA-XBR"/>
                                 </connections>
@@ -407,9 +407,9 @@
                                             <action selector="closeButtonPressed:" destination="904-DW-Z2w" eventType="touchUpInside" id="KTv-RW-VgL"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excursion Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-c9-fD1">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Excursion Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HUa-c9-fD1">
                                         <rect key="frame" x="50" y="0.0" width="270" height="50"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -458,6 +458,7 @@
         <image name="fast-forward-2" width="512" height="512"/>
         <image name="music-player" width="512" height="512"/>
         <image name="play" width="512" height="512"/>
+        <image name="play-2" width="512" height="512"/>
         <image name="power-button" width="512" height="512"/>
         <image name="usb" width="512" height="512"/>
         <image name="written-conversation-speech-bubble-with-letter-i-inside-of-information-for-interface" width="512" height="512"/>
