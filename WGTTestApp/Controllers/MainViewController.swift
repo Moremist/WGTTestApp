@@ -1,6 +1,5 @@
 import UIKit
 import AVFoundation
-import Kingfisher
 
 class MainViewController: UIViewController {
     
@@ -17,32 +16,34 @@ class MainViewController: UIViewController {
     @IBOutlet weak var descriptionLabel: UILabel!
     
     var currentExcursion: ExcursionModel? = nil
+    var currentStepIndex: Int? = nil
     
     var player: AVPlayer? = nil
     var playerItem: AVPlayerItem?
-    let seekDuration : Float64 = 5
     
     override func viewDidLoad() {
         super.viewDidLoad()
         excursionNameLabel.text = currentExcursion?.name
+        descriptionLabel.text = currentExcursion?.steps[currentStepIndex ?? 0].name
         
         photoCollectionView.delegate = self
         photoCollectionView.dataSource = self
-        
-        setUpPlayer()
-        
         photoCollectionView.contentInsetAdjustmentBehavior = .never
         
+        setUpPlayer()
         setUpStackView()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super .viewDidDisappear(animated)
+        
+        NotificationCenter.default.removeObserver(self, name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
+        
         player?.pause()
     }
     
     fileprivate func setUpPlayer() {
-        let url = currentExcursion?.steps[0].audioURL
+        let url = currentExcursion?.steps[currentStepIndex ?? 0].audioURL
         guard let url = url else { return }
         playerItem = AVPlayerItem(url: url)
         player = AVPlayer(playerItem: playerItem)
@@ -54,8 +55,8 @@ class MainViewController: UIViewController {
         playbackSlider.maximumValue = Float(seconds)
         playbackSlider.isContinuous = true
         playbackSlider.addTarget(self, action: #selector(playbackSliderValueChanged(_:)), for: .valueChanged)
-        
-        descriptionLabel.text = currentExcursion?.steps[0].text
+        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .normal)
+        playbackSlider.setThumbImage(#imageLiteral(resourceName: "rec (1)"), for: .highlighted)
         
         player?.addPeriodicTimeObserver(forInterval: CMTimeMakeWithSeconds(1, preferredTimescale: 1), queue: DispatchQueue.main, using: { cmTime in
             if self.player?.currentItem?.status == .readyToPlay {
@@ -64,14 +65,19 @@ class MainViewController: UIViewController {
             }
             
             if self.player?.rate == 0 {
-                self.playPauseButton.setImage(#imageLiteral(resourceName: "013-play"), for: .normal)
+                self.playPauseButton.setImage(#imageLiteral(resourceName: "play-2"), for: .normal)
             } else {
-                self.playPauseButton.setImage(#imageLiteral(resourceName: "021-pause"), for: .normal)
+                self.playPauseButton.setImage(#imageLiteral(resourceName: "pause-2"), for: .normal)
             }
             
         })
         
         NotificationCenter.default.addObserver(self, selector: #selector(self.finishedPlaying(_:)), name: NSNotification.Name.AVPlayerItemDidPlayToEndTime, object: playerItem)
+    }
+    
+    @objc func finishedPlaying( _ myNotification:NSNotification) {
+        player?.seek(to: CMTime.zero)
+        playPauseButton.setImage(#imageLiteral(resourceName: "013-play"), for: .normal)
     }
     
     fileprivate func setUpStackView() {
@@ -83,6 +89,7 @@ class MainViewController: UIViewController {
     @objc func showPlayerVC() {
         let vc = storyboard?.instantiateViewController(identifier: "playerVC") as! PlayerViewController
         vc.currentExcursion = self.currentExcursion
+        vc.currentStepIndex = self.currentStepIndex
         vc.player = self.player
         present(vc, animated: true)
     }
@@ -92,14 +99,9 @@ class MainViewController: UIViewController {
         let targetTime:CMTime = CMTimeMake(value: seconds, timescale: 1)
         player!.seek(to: targetTime)
         if player!.rate == 0 {
-            playPauseButton.setImage(#imageLiteral(resourceName: "021-pause"), for: .normal)
+            playPauseButton.setImage(#imageLiteral(resourceName: "pause-2"), for: .normal)
             player?.play()
         }
-    }
-    
-    @objc func finishedPlaying( _ myNotification:NSNotification) {
-        player?.seek(to: CMTime.zero)
-        playPauseButton.setImage(#imageLiteral(resourceName: "013-play"), for: .normal)
     }
     
     @IBAction func closeVCButtonPressed(_ sender: Any) {
@@ -110,33 +112,33 @@ class MainViewController: UIViewController {
     @IBAction func playButtonPressed(_ sender: Any) {
         if player?.rate == 0 {
             player?.play()
-            self.playPauseButton.setImage(#imageLiteral(resourceName: "021-pause"), for: .normal)
+            self.playPauseButton.setImage(#imageLiteral(resourceName: "pause-2"), for: .normal)
         } else {
             player?.pause()
-            self.playPauseButton.setImage(#imageLiteral(resourceName: "013-play"), for: .normal)
+            self.playPauseButton.setImage(#imageLiteral(resourceName: "play-2"), for: .normal)
         }
     }
     
     @IBAction func backwardButtonPressed(_ sender: Any) {
-        if player == nil { return }
-        if let duration = player!.currentItem?.duration {
-            let playerCurrentTime = CMTimeGetSeconds(player!.currentTime())
-            let newTime = playerCurrentTime - seekDuration
-            if newTime < CMTimeGetSeconds(duration)
-            {
-                let selectedTime: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
-                player!.seek(to: selectedTime)
-            }
-            player?.pause()
-            player?.play()
-        }
+        stepSeek(to: .backward)
     }
     
     @IBAction func forwardButtonPressed(_ sender: Any) {
+        stepSeek(to: .forward)
+    }
+    
+    fileprivate func stepSeek(to: StepDirection) {
         if player == nil { return }
         if let duration = player!.currentItem?.duration {
             let playerCurrentTime = CMTimeGetSeconds(player!.currentTime())
-            let newTime = playerCurrentTime + seekDuration
+            var multiplyer = 0
+            switch to {
+            case .backward:
+                multiplyer = -1
+            case .forward:
+                multiplyer = 1
+            }
+            let newTime = playerCurrentTime + Settings.shared.seekDuration * Double(multiplyer)
             if newTime < CMTimeGetSeconds(duration)
             {
                 let selectedTime: CMTime = CMTimeMake(value: Int64(newTime * 1000 as Float64), timescale: 1000)
@@ -158,7 +160,8 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = photoCollectionView.dequeueReusableCell(withReuseIdentifier: photoCellID, for: indexPath) as! PhotoTableViewCell
         cell.imageView.image = nil
-        cell.imageView.kf.setImage(with: URL(string: (currentExcursion?.steps[0].imagesURLs[indexPath.row])!))
+        let imageURL = URL(string: (currentExcursion?.steps[0].imagesURLs[indexPath.row])!)!
+        cell.imageView.load(url: imageURL)
         
         return cell
     }

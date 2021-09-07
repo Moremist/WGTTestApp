@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6F23BEDC26E767210005BC4F /* StepsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23BEDB26E767210005BC4F /* StepsViewController.swift */; };
+		6F23BEDE26E7AF710005BC4F /* StepDirectEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23BEDD26E7AF710005BC4F /* StepDirectEnum.swift */; };
+		6F23BEE026E7BE0E0005BC4F /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23BEDF26E7BE0E0005BC4F /* Settings.swift */; };
+		6F23BEE426E7D4420005BC4F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F23BEE326E7D4420005BC4F /* Extensions.swift */; };
 		6F413ACE26E663BF00D076DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413ACD26E663BF00D076DD /* AppDelegate.swift */; };
 		6F413AD026E663BF00D076DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F413ACF26E663BF00D076DD /* SceneDelegate.swift */; };
 		6F413AD526E663C000D076DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F413AD326E663C000D076DD /* Main.storyboard */; };
@@ -26,6 +30,10 @@
 
 /* Begin PBXFileReference section */
 		642622CC782CE79659B42DC1 /* Pods-WGTTestApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WGTTestApp.release.xcconfig"; path = "Target Support Files/Pods-WGTTestApp/Pods-WGTTestApp.release.xcconfig"; sourceTree = "<group>"; };
+		6F23BEDB26E767210005BC4F /* StepsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepsViewController.swift; sourceTree = "<group>"; };
+		6F23BEDD26E7AF710005BC4F /* StepDirectEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepDirectEnum.swift; sourceTree = "<group>"; };
+		6F23BEDF26E7BE0E0005BC4F /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		6F23BEE326E7D4420005BC4F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		6F413ACA26E663BF00D076DD /* WGTTestApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WGTTestApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F413ACD26E663BF00D076DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6F413ACF26E663BF00D076DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -87,15 +95,10 @@
 		6F413ACC26E663BF00D076DD /* WGTTestApp */ = {
 			isa = PBXGroup;
 			children = (
-				6F413ACD26E663BF00D076DD /* AppDelegate.swift */,
-				6F413ACF26E663BF00D076DD /* SceneDelegate.swift */,
+				6F9E67E126E6BA38008B035E /* Helpers */,
 				6F413AE526E6662C00D076DD /* Models */,
 				6F413AF026E6801400D076DD /* Controllers */,
 				6F413AD326E663C000D076DD /* Main.storyboard */,
-				6F413AEA26E6790C00D076DD /* APIUnsplash.swift */,
-				6F413AD626E663DB00D076DD /* Assets.xcassets */,
-				6F9E67DF26E6A77B008B035E /* audio.mp3 */,
-				6F413AD826E663DB00D076DD /* LaunchScreen.storyboard */,
 				6F413ADB26E663DB00D076DD /* Info.plist */,
 			);
 			path = WGTTestApp;
@@ -107,6 +110,8 @@
 				6F413AE126E6649000D076DD /* ExcursionModel.swift */,
 				6F413AE326E6650600D076DD /* ExcursionStepModel.swift */,
 				6F413AEC26E67B2600D076DD /* UnsplashModel.swift */,
+				6F23BEDD26E7AF710005BC4F /* StepDirectEnum.swift */,
+				6F23BEE326E7D4420005BC4F /* Extensions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -118,8 +123,23 @@
 				6F413AF126E6845A00D076DD /* PhotoTableViewCell.swift */,
 				6F413AE626E675DF00D076DD /* ExcursionListViewController.swift */,
 				6F9E67DD26E69D1E008B035E /* PlayerViewController.swift */,
+				6F23BEDF26E7BE0E0005BC4F /* Settings.swift */,
+				6F23BEDB26E767210005BC4F /* StepsViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		6F9E67E126E6BA38008B035E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6F413ACD26E663BF00D076DD /* AppDelegate.swift */,
+				6F413ACF26E663BF00D076DD /* SceneDelegate.swift */,
+				6F413AEA26E6790C00D076DD /* APIUnsplash.swift */,
+				6F9E67DF26E6A77B008B035E /* audio.mp3 */,
+				6F413AD826E663DB00D076DD /* LaunchScreen.storyboard */,
+				6F413AD626E663DB00D076DD /* Assets.xcassets */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		C0E202E71DD9A84547CD9F83 /* Pods */ = {
@@ -248,14 +268,18 @@
 			files = (
 				6F413AED26E67B2600D076DD /* UnsplashModel.swift in Sources */,
 				6F413AE426E6650600D076DD /* ExcursionStepModel.swift in Sources */,
+				6F23BEE026E7BE0E0005BC4F /* Settings.swift in Sources */,
 				6F413ACE26E663BF00D076DD /* AppDelegate.swift in Sources */,
+				6F23BEDE26E7AF710005BC4F /* StepDirectEnum.swift in Sources */,
 				6F413AEB26E6790C00D076DD /* APIUnsplash.swift in Sources */,
 				6F413AE726E675DF00D076DD /* ExcursionListViewController.swift in Sources */,
 				6F413AF226E6845A00D076DD /* PhotoTableViewCell.swift in Sources */,
 				6F413AE226E6649000D076DD /* ExcursionModel.swift in Sources */,
+				6F23BEDC26E767210005BC4F /* StepsViewController.swift in Sources */,
 				6F413AD026E663BF00D076DD /* SceneDelegate.swift in Sources */,
 				6F413AEF26E67EB200D076DD /* MainViewController.swift in Sources */,
 				6F9E67DE26E69D1E008B035E /* PlayerViewController.swift in Sources */,
+				6F23BEE426E7D4420005BC4F /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
